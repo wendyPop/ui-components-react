@@ -1,21 +1,21 @@
-import { useState } from "react";
-import "./styles.css";
-import RadioButton from "./RadioButton";
+import { useState } from 'react'
+import './assets/css/styles.css'
+import RadioButton from './components/RadioButton'
 
 export default function App() {
 
-  const [isLinkUrl, setIsLinkUrl] = useState(false);
+  const [ isLinkUrl, setIsLinkUrl ] = useState(false)
 
   const radioData = [
-    { label: "없음", value: false },
-    { label: "있음", value: true }
-  ];
+    { label: '없음', value: false },
+    { label: '있음', value: true }
+  ]
 
   const linkChange = (e) => {
-    const { value } = e.target;
-    const selected = radioData.find((v) => v.label === value);
-    setIsLinkUrl(selected.value);
-  };
+    const { value } = e.target
+    const selected = radioData.find((v) => v.label === value)
+    setIsLinkUrl(selected.value)
+  }
 
   return (
     <div className="App">
@@ -24,12 +24,12 @@ export default function App() {
         <RadioButton
           className='radio-box'
           inline={true}
-          name={"use"}
+          name={'use'}
           radioData={radioData}
           selected={isLinkUrl}
           changeHandler={linkChange}
         />
       </section>
     </div>
-  );
+  )
 }

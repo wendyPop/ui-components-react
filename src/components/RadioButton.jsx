@@ -12,7 +12,7 @@ const RadioButton = (props) => {
       { props.radioData.map( (v, i) => {
         return(
           <div className={classNm} key={i}>
-            <input 
+            <input
               className={'form-check-input'}
               type="radio"
               name={props.name}
@@ -21,10 +21,10 @@ const RadioButton = (props) => {
               checked={ v.value === props.selected }
               onChange={ props.changeHandler }
             />
-            <label 
+            <label
               className={'form-check-label'}
               htmlFor={ v.label}>
-                {v.label}
+              {v.label}
             </label>
           </div>
         )
