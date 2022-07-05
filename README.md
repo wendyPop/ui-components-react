@@ -10,7 +10,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 4. 라우트 처리
    1. react-router-dom@6 설치
    2. history@5 설치
+5. SCSS 처리중
    
+#### 라우트처리 use case
 ```javascript
 import {
    Routes,
@@ -36,4 +38,12 @@ import {
    </Routes>
 </BrowserRouter>
 
+```
+
+```json
+{
+   "node-sass": "^7.0.1",
+   "sass": "^1.52.2",
+   "sass-loader": "^13.0.0"
+}
 ```

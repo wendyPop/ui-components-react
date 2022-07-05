@@ -1,24 +1,29 @@
+.wth {
+  background-color: aqua;
+  color: blue;
+}
+
 .App {
     font-family: sans-serif;
     text-align: center;
   }
-  
+
   :root {
     --form-control-color: rebeccapurple;
   }
-  
+
   *,
   *:before,
   *:after {
     box-sizing: border-box;
   }
-  
+
   section {
     width: 700px;
     margin: 0 auto;
     margin-top: 30%;
   }
-  
+
   .form-check {
     display: block;
     font-family: system-ui, sans-serif;
@@ -29,12 +34,12 @@
     /* grid-template-columns: 1em auto; */
     /* gap: 0.5em; */
   }
-  
+
   .form-check-inline {
     display: inline-block;
     /* padding: 5px 10px; */
   }
-  
+
   input[type="radio"] {
     appearance: none;
     background-color: #fff;
@@ -49,7 +54,7 @@
     display: grid;
     place-content: center;
   }
-  
+
   input[type="radio"]::before {
     content: "";
     width: 0.65em;
@@ -59,8 +64,7 @@
     transition: 120ms transform ease-in-out;
     box-shadow: inset 1em 1em var(--form-control-color);
   }
-  
+
   input[type="radio"]:checked::before {
     transform: scale(1);
   }
-  
