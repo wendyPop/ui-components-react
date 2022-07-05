@@ -7,10 +7,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 1. git 리포지토리 생성 및 연결
 2. eslint 설정 및 babel preset 추가
 3. 절대경로 사용을 위한 jsconfig.json 추가
-4. 라우트 처리
+4. 라우트 처리 및 컴포넌트 분리
    1. react-router-dom@6 설치
    2. history@5 설치
-5. SCSS 처리중
+5. SCSS 처리, CSS 모듈 처리중
    
 #### 라우트처리 use case
 ```javascript
