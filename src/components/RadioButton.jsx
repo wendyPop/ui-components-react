@@ -17,7 +17,7 @@ const RadioButton = (props) => {
               type="radio"
               name={props.name}
               id={v.label}
-              value={ v.label}
+              value={ v.label }
               checked={ v.value === props.selected }
               onChange={ props.changeHandler }
             />

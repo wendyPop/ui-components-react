@@ -13,10 +13,58 @@ html {
 
 body {
   position: relative;
-  min-height: 100vh;
+  //min-height: 100vh;
   font-family: 'Noto Sans', -apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕',helvetica,'Apple SD Gothic Neo',sans-serif;
 }
 
+.root {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  nav {
+    width: 100%;
+    background-color: aliceblue;
+    height: 10vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    ul {
+      position: relative;
+      left: 20px;
+      top: 20px;
+      li {
+        transition: all .2s ease-in-out;
+        float: left;
+        padding: 10px;
+        margin: 5px;
+        display: inline-block;
+        border-radius: 18px;
+        font-size: 17px;
+        background-color: deepskyblue;
+        line-height: 17px;
+        border: none;
+        &:hover {
+          background-color: white;
+          border: 1px solid deepskyblue;
+          a {
+            color:deepskyblue;
+          }
+        }
+        a {
+          color: white;
+          font-weight: lighter;
+        }
+      }
+    }
+  }
+
+  .outlet-area {
+    height: 90vh;
+    text-align: center;
+    padding: 15%;
+  }
+}
 .blind {
   position: absolute;
   width: 1px;
@@ -109,18 +157,7 @@ input::placeholder {
   font-style: normal
 }
 
-// 공통
-.wrap {
-  width: 100%;
-  min-width: 1440px;
-}
-
-.inner{
-  width: 1440px;
-  margin: 0 auto;
-}
-
-.dimed{
+.dimmed{
   position: fixed;
   top: 0;
   right: 0;

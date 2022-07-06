@@ -3,16 +3,17 @@ import { Link, Outlet } from 'react-router-dom'
 const Layout = () => {
   return (
     <>
-      <div>
+      <div className={'root'}>
         <nav>
           <ul>
-            <li><Link to="/Home">Home</Link></li>
-            <li><Link to="/radio">Radio Button</Link></li>
-            <li><Link to="/pagination">Pagination</Link></li>
+            <li><Link to="/Home"># home</Link></li>
+            <li><Link to="/radio"># radio</Link></li>
+            <li><Link to="/pagination"># pagination</Link></li>
           </ul>
         </nav>
-        <hr />
-        <Outlet />
+        <section className={'outlet-area'}>
+          <Outlet />
+        </section>
       </div>
     </>
   )

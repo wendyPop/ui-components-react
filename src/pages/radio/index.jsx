@@ -12,7 +12,7 @@ export default function App() {
     { label: '있음', value: true }
   ]
 
-  const linkChange = (e) => {
+  const linkChange = e => {
     const { value } = e.target
     const selected = radioData.find((v) => v.label === value)
     setIsLinkUrl(selected.value)
@@ -20,18 +20,17 @@ export default function App() {
 
   return (
     <>
-      <div className={Styles.bgColor}>
-        <p className={Styles.Box}>간단 라디오 </p>
-        <section>
+      <div className={Styles.TextAlign}>
+        <h3>간단 라디오 </h3>
+        <article>
           <RadioButton
             className='radio-box'
-            inline={true}
             name={'use'}
-            radioData={radioData}
-            selected={isLinkUrl}
-            changeHandler={linkChange}
+            radioData={ radioData }
+            selected={ isLinkUrl }
+            changeHandler={ linkChange }
           />
-        </section>
+        </article>
       </div>
     </>
   )

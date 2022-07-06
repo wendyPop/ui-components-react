@@ -12,11 +12,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
    2. history@5 설치
 5. CSS 모듈 처리
 6. SCSS 적용중
-7. ~~글로벌 scss (prepend data) 적용중~~
-   1. scss @use 를 활용하여 App.js 임포트하면 자동으로 믹스인등이 모두 적용됨
+7. ~~글로벌 scss (prepend data) 적용~~
+   1. scss @use 를 활용하여 App.js 임포트하면 자동으로 믹스인등이 모두 프리로드 됨
+8. 라디오 정리
+9. 페이지네이션 넣기
+10. react transition group 만들어보기
+11. global styled -  styled component
 
 
-
+스위치 버튼
+공통 input
+공통 select box
+공통 테이블
 
 
 ### CSS 모듈 처리
