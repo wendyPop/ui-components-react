@@ -1,0 +1,199 @@
+@charset 'utf-8';
+
+/*@mixin mobile {
+  @media (min-width: 335px) and (max-width: 720px - 1px) {
+    @content;
+  }
+}*/
+
+@mixin tablet {
+  @media (max-width: 1000px  - 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1550px) {
+    @content;
+  }
+}
+
+//Actions Mixin
+@mixin cssTransitionDuration($timer) {
+  transition-duration: $timer;
+}
+
+
+//Elevation
+@mixin elevation-1 () {
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
+}
+@mixin elevation-2 () {
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+}
+@mixin elevation-3 () {
+  box-shadow: 0 3px 3px -2px rgba(0,0,0,.2),0 3px 4px 0 rgba(0,0,0,.14),0 1px 8px 0 rgba(0,0,0,.12);
+}
+@mixin elevation-4 () {
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12);
+}
+
+//btnStyle
+@mixin btnStyle($width, $height, $color, $bg-color, $borderStyle) {
+  width:$width;
+  height:$height;
+  border:$borderStyle;
+  border-radius:5px;
+  color:$color;
+  text-align:center;
+  line-height:$height;
+  background-color:$bg-color;
+}
+
+@mixin boxSizing() {
+  box-sizing:border-box;
+}
+//opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin hoverZoom($timer) {
+  transition: all $timer ease-out;
+}
+
+@mixin scaleZoom($zoom1,$zoom2) {
+  transform: scale($zoom1, $zoom2);
+}
+
+@mixin textOverflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin inputOpacity {
+  opacity: 0;
+}
+
+@mixin inputField {
+  width: 100%;
+  padding:0 20px;
+  font-weight: 300;
+  font-size: $base-font-size;
+  height: $base-input-height;
+  border:1px solid $base-border-color;
+  border-radius: $base-border-radius;
+  transition: $base-transition;
+  &:focus {
+    outline: none;
+    border:1px solid $base-color;
+  }
+}
+
+@mixin popupBackground($active: 'off') {
+  @if $active == 'off' {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.32);
+    transition: $base-transition;
+    visibility: hidden;
+    opacity: 0;
+  } @else {
+    transition-delay: 0.15s;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+
+
+// -----------------------------------  여기서부터는 퍼블리싱 영역
+
+
+@mixin clear {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin ellipsis($line: 1) {
+  @if ($line == 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}
+
+// 가운데 정렬
+@mixin center-all {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 가로 정렬
+@mixin center-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+//세로 정렬
+@mixin center-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//플렉스 사용시
+@mixin flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+// 스프라이트
+@mixin sprite($sprite,$name,$size){
+  background-image: url(map_get($sprite,url));
+  background-position: getImagePositionFromSprite(
+                  $name,
+                  map_get($sprite,names),
+                  map_get($sprite,columns),
+                  map_get($sprite,rows)
+  );
+  height: $size;
+  width: $size;
+  background-size: auto $size * (map_get($sprite,rows));
+}

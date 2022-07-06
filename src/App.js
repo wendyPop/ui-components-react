@@ -5,6 +5,7 @@ import {
   BrowserRouter
 } from 'react-router-dom'
 
+import 'assets/css/root.scss'
 import Layout from 'components/layout/Layout'
 
 import Home from 'pages/home'

@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+$main-color: #7030a0;
+$box-button-text: #fff;
+$grey: #d8d8d8;
+$alert-color: #ff6b6b;
+
+html {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.56px;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: 'Noto Sans', -apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕',helvetica,'Apple SD Gothic Neo',sans-serif;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+button, a{
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+//폰트
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('※'),
+  url("../font/NotoSansKR-Light.woff2") format('woff2'),
+  url("../font/NotoSansKR-Light.woff") format('woff'),
+  url("../font/NotoSansKR-Light.otf") format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('※'),
+  url("../font/NotoSansKR-Regular.woff2") format('woff2'),
+  url("../font/NotoSansKR-Regular.woff") format('woff'),
+  url("../font/NotoSansKR-Regular.otf") format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('※'),
+  url("../font/NotoSansKR-Medium.woff2") format('woff2'),
+  url("../font/NotoSansKR-Medium.woff") format('woff'),
+  url("../font/NotoSansKR-Medium.otf") format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('※'),
+  url("../font/NotoSansKR-Bold.woff2") format('woff2'),
+  url("../font/NotoSansKR-Bold.woff") format('woff'),
+  url("../font/NotoSansKR-Bold.otf") format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('※'),
+  url("../font/roboto-v29-latin-regular.woff2") format('woff2'), /* Super Modern Browsers */
+  url("../font/roboto-v29-latin-regular.woff") format('woff'), /* Modern Browsers */
+  url("../font/roboto-v29-latin-regular.eot") format('truetype'); /* Safari, Android, iOS */
+  unicode-range: U+0030-0039, U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('※'),
+  url("../font/roboto-v29-latin-ext_latin-500.woff2") format('woff2'), /* Super Modern Browsers */
+  url("../font/roboto-v29-latin-ext_latin-500.woff") format('woff'), /* Modern Browsers */
+  url("../font/roboto-v29-latin-ext_latin-500.eot") format('truetype'); /* Safari, Android, iOS */
+  unicode-range: U+0030-0039, U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('※'),
+  url("../font/roboto-v29-latin-ext_latin-700.woff2") format('woff2'), /* Super Modern Browsers */
+  url("../font/roboto-v29-latin-ext_latin-700.woff") format('woff'), /* Modern Browsers */
+  url("../font/roboto-v29-latin-ext_latin-700.eot") format('truetype'); /* Safari, Android, iOS */
+  unicode-range: U+0030-0039, U+0041-005A, U+0061-007A;
+}
+
+@font-face {
+  font-family: 'yg-jalnan';
+  src: url("../font/yg-jalnan.eot");
+  src: url("../font/yg-jalnan.eot?#iefix") format("embedded-opentype"), url("../font/yg-jalnan.woff") format("woff"), url("../font/yg-jalnan.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal
+}
+
+// 공통
+.wrap {
+  width: 100%;
+  min-width: 1440px;
+}
+
+.inner{
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.dimed{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+}

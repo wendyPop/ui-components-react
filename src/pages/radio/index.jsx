@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import 'assets/css/Radio.module.css'
+import Styles from 'assets/css/Radio.module.scss'
 
 import RadioButton from 'components/RadioButton'
 
@@ -20,17 +20,19 @@ export default function App() {
 
   return (
     <>
-      <p className={'wth'}>간단 라디오 </p>
-      <section>
-        <RadioButton
-          className='radio-box'
-          inline={true}
-          name={'use'}
-          radioData={radioData}
-          selected={isLinkUrl}
-          changeHandler={linkChange}
-        />
-      </section>
+      <div className={Styles.bgColor}>
+        <p className={Styles.Box}>간단 라디오 </p>
+        <section>
+          <RadioButton
+            className='radio-box'
+            inline={true}
+            name={'use'}
+            radioData={radioData}
+            selected={isLinkUrl}
+            changeHandler={linkChange}
+          />
+        </section>
+      </div>
     </>
   )
 }
